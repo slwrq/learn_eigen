@@ -11,8 +11,12 @@ int main()
   m(1,1) = m(1,0) + m(0,1);
   m(2,1) = m(2,0) + m(1,1);
   std::cout << "Here is the matrix m:\n" << m << std::endl;
+  std::cout << "Here is the matrix m.transpose():\n" << m.transpose() << std::endl;
+  std::cout << "Here is the matrix m.conjugate():\n" << m.conjugate() << std::endl;
+  std::cout << "Here is the matrix m.adjoint():\n" << m.adjoint() << std::endl;
   std::cout << "Here is the matrix m's cols:\n" << m.cols() << std::endl;
   std::cout << "Here is the matrix m's rows:\n" << m.rows() << std::endl;
+  std::cout << "Here is the matrix m's colwise's squareNorm:\n" << m.colwise().squaredNorm() << std::endl;
   VectorXd v(2);
   v(0) = 4;
   v(1) = v(0) - 1;
